@@ -734,10 +734,6 @@ class VaTransaction implements ModelInterface, ArrayAccess
         if ((mb_strlen($payment_bank_name) > 30)) {
             throw new \InvalidArgumentException('invalid length for $payment_bank_name when calling VaTransaction., must be smaller than or equal to 30.');
         }
-        if ((mb_strlen($payment_bank_name) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $payment_bank_name when calling VaTransaction., must be bigger than or equal to 1.');
-        }
-
         $this->container['payment_bank_name'] = $payment_bank_name;
 
         return $this;
@@ -765,10 +761,6 @@ class VaTransaction implements ModelInterface, ArrayAccess
         if ((mb_strlen($payment_branch_name) > 15)) {
             throw new \InvalidArgumentException('invalid length for $payment_branch_name when calling VaTransaction., must be smaller than or equal to 15.');
         }
-        if ((mb_strlen($payment_branch_name) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $payment_branch_name when calling VaTransaction., must be bigger than or equal to 1.');
-        }
-
         $this->container['payment_branch_name'] = $payment_branch_name;
 
         return $this;
